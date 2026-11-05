@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Vectorstore (if Chroma persistence is enabled later)
+chroma_db/
+
+# Editor / env
+.env
