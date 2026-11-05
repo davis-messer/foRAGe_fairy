@@ -1,0 +1,101 @@
+[
+    {
+        "id": "q1",
+        "query": "Why did some critics dissaprove of Mary Oliver?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "MaryOliver.pdf",
+                "page": 1,
+                "text": "Critics sometimes dismissed her as too simple or sentimental, but she won the field's highest honors and drew an enormous popular readership."
+            }
+        ],
+        "answer": "Critics dismissed her as too simple or sentimental..."
+    },
+    {
+        "id": "q2",
+        "query": "What awards did Mary Oliver win?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "MaryOliver.pdf",
+                "page": 1,
+                "text": "American Primitive (1983), which won the Pulitzer Prize for Poetry (1984)\nDream Work (1986), which includes \"Wild Geese,\n\" one of her most famous poems\nHouse of Light (1990), which includes \"The Summer Day,\n\" whose closing question about\nwhat you plan to do with your life is her most quoted line\nNew and Selected Poems (1992), which won the National Book Award"
+            }
+        ],
+        "answer": "Her work titled American Primitive (1983) won the Pulitzer Prize for Poetry, and her work titled New and Selected Poems (1992) won the National Book Award."
+    },
+    {
+        "id": "q3",
+        "query": "Which city in Florida did Mary Oliver live and die in?",
+        "answerable": false,
+        "context": [],
+        "answer": "This information is not specified in the provided documents."
+    },
+    {
+        "id": "q4",
+        "query": "Was Transcendentalism influenced by Eastern philosophy? If so, which texts?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "Transcendentalism.pdf",
+                "page": 1,
+                "text": "It also drew on German idealism (Kant, via Coleridge and Carlyle), English Romanticism, Platonism, and Hindu and Buddhist texts like the Bhagavad Gita."
+            }
+        ],
+        "answer": "Yes, Transcendentalism was influenced by Hindu and Buddhist texts like the Bhagavad Gita."
+    },
+    {
+        "id": "q5",
+        "query": "Were there any prominent figures leading the Transcendentalist movement?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "Transcendentalism.pdf",
+                "page": 1,
+                "text": "1. Ralph Waldo Emerson (1803–1882) was the movement's central figure.\nNature (1836)\n\"The American Scholar\" (1837), a call for American intellectual independence from Europe\n\"The Divinity School Address\" (1838), which caused a scandal at Harvard by criticizing institutional Christianity\nEssays: First Series (1841), including \"Self-Reliance,\" \"The Over-Soul,\" and \"Circles\"\nEssays: Second Series (1844), including \"The Poet\" and \"Experience\"\n2. Henry David Thoreau (1817–1862) was Emerson's protégé and the movement's most practical experimenter.\nWalden; or, Life in the Woods (1854), about his two years living simply at Walden Pond\n\"Resistance to Civil Government,\" better known as \"Civil Disobedience\" (1849), which later influenced Gandhi and Martin Luther King Jr.\nA Week on the Concord and Merrimack Rivers (1849)\n3. Margaret Fuller (1810–1850) was a critic, journalist, and the first editor of The Dial.\nWoman in the Nineteenth Century (1845), a foundational American feminist text\nSummer on the Lakes (1844)"
+            }
+        ],
+        "answer": "Prominent figures included Ralph Waldo Emerson, Henry David Thoreau, and Margaret Fuller."
+    },
+    {
+        "id": "q6",
+        "query": "What specifically did Ralph Waldo Emerson criticize about organized religion?",
+        "answerable": false,
+        "context": [],
+        "answer": "This information is not specified in the provided documents."
+    },
+    {
+        "id": "q7",
+        "query": "How many years apart were the original release dates of the iPad and Apple Watch?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "computer_history.txt",
+                "page": 1,
+                "text": "* 2010: The iPad, Apple's flagship handheld tablet, is unveiled.\n* 2011: Google releases the Chromebook, which runs on Google Chrome OS.\n* 2015: Apple releases the Apple Watch. Microsoft releases Windows 10."
+            }
+        ],
+        "answer": "The iPad was released in 2010 and the Apple Watch was released in 2015, so they were 5 years apart."
+    },
+    {
+        "id": "q8",
+        "query": "What's the difference between Mac OS X, OS X, and macOS?",
+        "answerable": true,
+        "context": [
+            {
+                "doc": "computer_history.txt",
+                "page": 1,
+                "text": "2001: Mac OS X, later renamed OS X then simply macOS, is released by Apple as the successor to its standard Mac Operating System."
+            }
+        ],
+        "answer": "Mac OS X was the original name, OS X was the updated name, and macOS is the current name."
+    },
+    {
+        "id": "q9",
+        "query": "When was Anthropic's first LLM model released?",
+        "answerable": false,
+        "context": [],
+        "answer": "This information is not specified in the provided documents."
+    }
+]
