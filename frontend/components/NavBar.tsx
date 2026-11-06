@@ -24,7 +24,7 @@ export default function NavBar({ active, onSelect }: NavBarProps) {
     <nav className={styles.nav} aria-label="Main">
       <div className={styles.brand}>
         <LogoIcon width={24} height={24} />
-        <span className={styles.brandText}>foRAGe fairy</span>
+        <span className={styles.brandText}>FoRAGe Fairy</span>
       </div>
       <ul className={styles.list}>
         {items.map(({ id, label, icon: Icon }) => (
