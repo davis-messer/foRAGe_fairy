@@ -1,22 +1,20 @@
-"""Run test_queries.JSON through the RAG chain and score responses.
+"""
+Run test_queries.json through the RAG chain and score responses.
 
-Not a true unit test — LLM output is non-deterministic, so instead of
-asserting exact equality we use heuristics:
-
-- answerable=false  -> response should abstain ("not specified", "don't know")
-- answerable=true   -> response should NOT abstain, and should share
-                       content words with the reference answer
+Note: LLM output is non-deterministic, so instead of asserting exact equality
+heuristics are used:
+    - answerable=false  -> response should abstain ("not specified", "don't know")
+    - answerable=true   -> response should NOT abstain, and should share
+                           content words with the reference answers
 """
 
 import json
 import re
-import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-
-# importing builds the chain: loads docs, embeds, sets up retriever
+from rag_assistant.config import SAMPLE_DOCUMENTS_DIR
 from rag_assistant.generation import rag_chain
+from rag_assistant.index import index_directory
 
 ABSTAIN_MARKERS = [
     "not specified",
@@ -54,9 +52,8 @@ def content_overlap(response: str, reference: str) -> float:
 def check(q: dict, response: str) -> tuple[bool, str]:
     """Return (passed, reason).
 
-    Note: an answerable response may legitimately contain abstention markers
-    ("context does not provide X") alongside real content — a grounded partial
-    answer is not a pure abstention, so check overlap first.
+    Note: Answerable responses may contain abstention markers ("context does not provide X") 
+    alongside real content — grounded partial answers aren't pure abstention, so check overlap first.
     """
     if not q["answerable"]:
         ok = is_abstention(response)
@@ -70,7 +67,8 @@ def check(q: dict, response: str) -> tuple[bool, str]:
 
 
 if __name__ == "__main__":
-    queries = json.load(open(Path(__file__).parent / "test_queries.JSON"))
+    index_directory(SAMPLE_DOCUMENTS_DIR)
+    queries = json.load(open(Path(__file__).parent / "test_queries.json"))
     results = []
 
     for q in queries:

@@ -1,0 +1,32 @@
+# This makes the backend installable as the rag-assistant package (pip install -e backend). It lists
+# the dependencies: the LangChain Ollama/Chroma/community/text-splitter packages, pypdf and docx2txt
+# for reading files, and fastapi, uvicorn and python-multipart for the API. It requires Python 3.12
+# or newer.
+
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-assistant"
+version = "0.1.0"
+description = "Local RAG assistant over your documents using Ollama"
+requires-python = ">=3.12"
+dependencies = [
+    # RAG pipeline (local Ollama - no API keys needed)
+    "langchain-ollama",
+    "langchain-chroma",
+    "langchain-community",
+    "langchain-text-splitters",
+    # Document loaders
+    "pypdf",
+    "docx2txt",
+    # HTTP API for the frontend
+    "fastapi",
+    "uvicorn[standard]",
+    "python-multipart",
+]
+
+[tool.setuptools]
+packages = ["rag_assistant"]

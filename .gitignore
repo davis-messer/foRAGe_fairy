@@ -6,6 +6,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.egg-info/
+
+# Files uploaded through the API
+data/uploads/
 
 # Vectorstore (if Chroma persistence is enabled later)
 chroma_db/

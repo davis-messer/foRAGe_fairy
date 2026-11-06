@@ -1,1 +1,3 @@
-"""Local RAG pipeline over the documents/ folder using Ollama."""
+"""
+Local RAG pipeline over uploaded documents using Ollama.
+"""
