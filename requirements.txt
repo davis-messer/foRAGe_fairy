@@ -1,9 +1,0 @@
-# RAG pipeline (local Ollama - no API keys needed)
-langchain-ollama
-langchain-chroma
-langchain-community
-langchain-text-splitters
-
-# Document loaders
-pypdf
-docx2txt
