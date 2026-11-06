@@ -1,0 +1,63 @@
+:root {
+  --bg: #f7e3ee;
+  --surface: #ffffff;
+  --surface-muted: #f9eef5;
+  --border: #e4bfd6;
+  --text: #54394a;
+  --text-muted: #a98ea0;
+  --accent: #dd7cb2;
+  --accent-hover: #ea97c4;
+  --accent-soft: #fbe4f1;
+  --danger: #dc2626;
+  --nav-bg: #ffffff;
+  --nav-text: #54394a;
+  --nav-active: #dd7cb2;
+  --radius: 14px;
+  --card-shadow: 0 4px 16px rgba(180, 120, 160, 0.18);
+  --grid-line: rgba(221, 124, 178, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0d10;
+    --surface: #14171c;
+    --surface-muted: #1b1f25;
+    --border: #262b33;
+    --text: #e6e8eb;
+    --text-muted: #9097a1;
+    --accent: #4dd8ea;
+    --accent-hover: #60cfdd;
+    --accent-soft: #1e1b4b;
+    --nav-bg: #14171c;
+    --grid-line: rgba(255, 255, 255, 0.06);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+textarea,
+input {
+  font: inherit;
+  color: inherit;
+}
